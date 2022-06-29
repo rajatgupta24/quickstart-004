@@ -6,7 +6,35 @@ metadata:
 spec:
   pipelineSpec:
     tasks:
-      - name: from-build-pack
+      - name: from-build-pack-1
+        resources: {}
+        taskSpec:
+          metadata: {}
+          stepTemplate:
+            image: uses:jenkins-x/jx3-pipeline-catalog/tasks/go/pullrequest.yaml@versionStream
+            name: ""
+            resources:
+              # override limits for all containers here
+              limits: {}
+            workingDir: /workspace/source
+          steps:
+            - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
+              name: ""
+              resources: {}
+            - image: ghcr.io/jenkins-x/jx-boot:100
+              name: jx-variables
+              resources:
+                # set requests for the pod here
+                requests:
+                  cpu: 400m
+                  memory: 600Mi
+              script: |
+                #!/usr/bin/env sh
+                jx gitops variables
+                jx gitops pr variables
+            - name: build-make-linux
+              resources: {}
+      - name: from-build-pack-2
         resources: {}
         taskSpec:
           metadata: {}
