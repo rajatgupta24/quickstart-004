@@ -21,15 +21,18 @@ spec:
             - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
               name: ""
               resources: {}
-            - name: jx-variables
+            - image: ghcr.io/jenkins-x/jx-boot:100
+              name: jx-variables
               resources:
-                # override requests for the pod here
+                # set requests for the pod here
                 requests:
                   cpu: 400m
                   memory: 600Mi
+              script: |
+                #!/usr/bin/env sh
+                jx gitops variables
+                jx gitops pr variables
             - name: build-make-linux
-              resources: {}
-            - name: check-registry
               resources: {}
   podTemplate: {}
   serviceAccountName: tekton-bot
