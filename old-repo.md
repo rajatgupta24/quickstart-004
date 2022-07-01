@@ -1,0 +1,29 @@
+# List of repo which are on go v1.15 or old
+- https://github.com/jenkins-x/bdd-jx3
+- https://github.com/jenkins-x/go-chaos
+- https://github.com/jenkins-x/bucketrepo
+- https://github.com/jenkins-x/kuberhealthy 
+- https://github.com/jenkins-x/cd-indicators
+- https://github.com/jenkins-x/jx-git-operator
+- https://github.com/jenkins-x/jenkins-x-schemas
+- https://github.com/jenkins-x/acme at 12
+- https://github.com/jenkins-x/bdd-jx at 12
+- https://github.com/jenkins-x/status-badge at 12
+- https://github.com/jenkins-x/gsm-controller at 12
+- https://github.com/jenkins-x/helm-unit-tester at 12
+- https://github.com/jenkins-x/jx-codegen/ at 13
+- https://github.com/jenkins-x/step-goreleaser/ at 13
+- https://github.com/jenkins-x/terraform-operator at 13
+- https://github.com/jenkins-x/lighthouse-jx-controller/ at 13
+- https://github.com/jenkins-x/lighthouse-telemetry-plugin at 16
+- https://github.com/jenkins-x/dex last commit 3 years back (could not find go version) 
+- https://github.com/jenkins-x/survey last commit 3 years back (could not find go version) 
+- https://github.com/jenkins-x/gouuid last commit 3 years back (could not find go version) 
+- https://github.com/jenkins-x/pipeline last commit 3 years back (could not find go version)
+- https://github.com/jenkins-x/gen-crd-api-reference-docs last commit 3 years back (could not find go version) 
+- https://github.com/jenkins-x/build last commit 4 years back (could not find go version) 
+- https://github.com/jenkins-x/structs last commit 4 years back (could not find go version) 
+- https://github.com/jenkins-x/client-go last commit 4 years back (could not find go version) 
+- https://github.com/jenkins-x/sonobuoy last commit 4 years back (could not find go version) 
+- https://github.com/jenkins-x/oauth2_proxy last commit 4 years back (could not find go version) 
+- https://github.com/jenkins-x/aws-k8s-tester last commit 4 years back (could not find go version) 
