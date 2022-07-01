@@ -15,6 +15,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	if from != "/favicon.ico" {
 		log.Printf("title: %s\n", title)
+	} else {
+		log.Printf("title: %s\n", "SCAMMED")
 	}
 
 	fmt.Fprintf(w, "Hello from:  "+title+"\n")
