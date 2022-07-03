@@ -20,5 +20,16 @@ graph LR;
 - jx-build-controller
 - jx-pipeline
 
-
 ## How the boot-job works
+
+```mermaid
+graph LR;
+    jx-admin-->jx-git-operator;
+    jx-git-operator-->jx-gitops;
+    jx-gitops-->makefile;
+    makefile-->helmfile;
+    helmfile-->kubectl;
+    kubectl-->build-controller;
+    build-controller-->jx-plugins;
+    jx-plugins-->PipelineActivity;
+```
